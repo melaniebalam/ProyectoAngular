@@ -12,9 +12,12 @@ export class EmpleadoComponent implements OnInit {
   nombre = "Melanie";
   apellido = "Balam";
   edad = 17;
-  //empresa = "Pildoras informaticas";
+  empresa = "Pildoras Informaticas";
   constructor() { }
 
+  /*cambiaEmpresa(event:Event){
+    this.empresa=(<HTMLInputElement>event.target).value;
+  }*/
   /*getEdad(){
     return this.edad;
   }*/
