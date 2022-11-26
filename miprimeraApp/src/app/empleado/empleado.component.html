@@ -1,1 +1,15 @@
-<p>Aqui ira un empleado!</p>
+<p>Nombre del empleado:{{nombre}}</p>
+<p>Apellido del empleado: {{apellido}}</p>
+<p>Edad del empleado: {{edad<18 ? "Menor de edad":"Mayor de edad"}}</p>
+<p>Empresa del empleado:{{empresa.value}}</p>
+
+<!--Esta parte es un property binding el "habilatacionCuadro"-->
+Introduce la empresa: <input type="text" #empresa (keyup)="0" [disabled]="habilitacionCuadro">
+
+<br>
+<br>
+{{textoRegistrado}}<br>
+Registrado: <input type="radio" value="si" name="nRegistro" id="registro" [checked]="usuRegistrado" (click)="setUsuarioRegistrado($event)"><br>
+No registrado: <input type="radio" value="no" name="nRegistro" (click)="setUsuarioRegistrado($event)">
+{{getRegistroUsuario()}} <!-- se deja de ejecutar el property en esta parte-->
+

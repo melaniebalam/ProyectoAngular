@@ -5,9 +5,10 @@ import { AppComponent } from './app.component';
 import { EmpleadosComponent } from './empleados/empleados.component';
 import { EmpleadoComponent } from './empleado/empleado.component';
 
+
 @NgModule({
   declarations: [
-    AppComponent, EmpleadosComponent, EmpleadoComponent
+    AppComponent, EmpleadosComponent, EmpleadoComponent, 
   ],
   imports: [
     BrowserModule
