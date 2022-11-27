@@ -2,14 +2,16 @@
 <form>
   <input type="text" name="nombre" [(ngModel)]="nombre"><br>
   <input type="text" name="apellido" [(ngModel)]="apellido"><br>
+  <input type="text" name="apellido" [(ngModel)]="cargo"><br>
   <input type="submit" value="Registrate" (click)="registrarUsuario()">
 </form>
 <br>
 <!--Aqui se usa el ngIf y el else-->
-<p *ngIf="registrado; else sinRegistrar">{{mensaje}} con el nombre {{nombre}} {{apellido}}</p>
+<p *ngIf="registrado; else sinRegistrar">{{mensaje}} con el nombre {{nombre}} {{apellido}} 
+  y tiene el cargo de <span [ngClass]="{paraDirectores:cargo=='director'}">{{cargo}}</span></p>
 
 <ng-template #sinRegistrar>
-  <p>Nadie registrado</p>
+  <p>Nadie registrado</p> 
 </ng-template>
 
 <br><br>
