@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
-import { Empleado } from './empleado.model';
+import { Component, OnInit } from '@angular/core';
+/*import { Empleado } from './empleado.model';
+import { EmpleadosService } from './empleados.service';
+import { ServicioEmpleadosService } from './servicio-empleados.service';*/
 
 
 @Component({
@@ -7,26 +9,32 @@ import { Empleado } from './empleado.model';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  titulo = 'Listado de Empleados'; 
+export class AppComponent implements OnInit{
+  //titulo = 'Listado de Empleados'; 
 
-  nombre: string="";
+  //constructor(private miServicio:ServicioEmpleadosService, private empleadosService:EmpleadosService){
+    //this.empleados=this.empleadosService.empleados;
+  //}
+
+  constructor(){}
+  ngOnInit(): void {
+
+  }
+  /*ngOnInit(): void {
+    this.empleados=this.empleadosService.empleados;
+  }*/
+  /*nombre: string="";
   apellido: string="";
   cargo: string="";
   salario: number=0;
  // se esta almecenado dentro de un arrglo
-  empleados:Empleado[]=[
-    new Empleado("Juan", "Diaz", "Presidente", 7500),
-    new Empleado("Ana", "Martinez", "Directora", 5500),
-    new Empleado("Maria", "Fernandez", "Jefa seccion", 3500),
-    new Empleado("Laura", "Lopez", "Administrativo", 2500),
-  ];
-  
+ empleados:Empleado[]=[]
   // esta es la funcion que hace que se puedan agregar loes empleados a la lista
   agregarEmpleado(){
     let miEmpleado=new Empleado(this.nombre,this.apellido,this.cargo,this.salario);
-    this.empleados.push(miEmpleado); // array: el PUSH añade uno o más elementos al final de un array y devuelve la nueva longitud del array.
-  }
+    //this.miServicio.mostrarMensaje("Nombre del empleado:" + miEmpleado.nombre);
+    this.empleadosService.agregarEmpleadoService(miEmpleado);
+  }*/
 
   // PARTE DEL VIDEO HECHO POR EL
     /*agregarEmpleados(){
