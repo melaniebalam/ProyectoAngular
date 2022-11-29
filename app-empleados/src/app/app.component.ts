@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 /*import { Empleado } from './empleado.model';
 import { EmpleadosService } from './empleados.service';
 import { ServicioEmpleadosService } from './servicio-empleados.service';*/
-
+import firebase from 'firebase/compat/app'
 
 @Component({
   selector: 'app-root',
@@ -19,6 +19,12 @@ export class AppComponent implements OnInit{
   constructor(){}
   ngOnInit(): void {
 
+    firebase.initializeApp({
+
+      apiKey: "AIzaSyBTljWXfBv4HA33K0l4dYxlW0Ke5u6OMXI",
+      authDomain: "mis-clientes-45502.firebaseapp.com",
+      
+    });
   }
   /*ngOnInit(): void {
     this.empleados=this.empleadosService.empleados;
