@@ -10,13 +10,13 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;">
+    align-items: center;" #miFormulario="ngForm" (ngSubmit)="login(miFormulario)">
         <div class="form-group col-md-3">
-            <input type="email"  class="form-control" name="email" placeholder="Email">
+            <input type="email"  class="form-control" name="email" placeholder="Email" ngModel>
         </div>
         <br>
         <div class="form-group col-md-3">
-            <input type="password"  class="form-control" name="password" placeholder="Password">
+            <input type="password"  class="form-control" name="password" placeholder="Password" ngModel>
         </div>
         <br>
         <div style="text-align: center;">
