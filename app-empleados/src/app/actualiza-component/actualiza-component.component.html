@@ -1,0 +1,27 @@
+<p>actualiza-component works!</p>
+<div class="container" style="text-align: center;">
+  <div class="row">
+    <div class="col">
+<form> 
+    <br>
+    <label>Nombre: </label> <br>
+    <input type="text" name="nombre" style="width:30%; border-radius: 5px;" placeholder="Ingresa tu nombre" [(ngModel)]="nombre"><br><br>
+
+    <label>Apellido: </label><br>
+    <input type="text" name="apellido" style="width:30%; border-radius: 5px;" placeholder="Ingresa tu apellido" [(ngModel)]="apellido"><br><br>
+
+    <label>Cargo: </label><br>
+    <input type="text" name="cargo" style="width:30%; border-radius: 5px;" placeholder="Ingresa tu cargo" [(ngModel)]="cargo"><br><br>
+    
+    <label>Salario: </label> <br>
+    <input type="number" name="salario" style="width:30%; border-radius: 5px;" placeholder="Ingresa tu salario" [(ngModel)]="salario"><br><br>
+    <input type="submit" class="btn btn-success" value="Accion" (click)=" accionEmpleado()">
+    <!--<input type="submit" class="btn btn-danger" value="Eliminar" (click)=" eliminaEmpleado()" style="margin-top: 35px;">-->
+  </form>
+</div>
+</div>
+</div>
+<br><br>
+  <div style="text-align: center;">
+    <button class="btn btn-primary" (click)="volverHome()">Ir a inicio</button>
+</div>
